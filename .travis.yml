@@ -2,18 +2,18 @@ os: windows
 language: node_js
 node_js:
   #- "iojs"
-  - "7.10"
+  - "7.10.1"
 before_install:
 # Install NVS.
-- git clone --branch v1.2.0 --depth 1 https://github.com/jasongin/nvs C:/nvs
+- git clone --branch v1.2.0 --depth 1 https://github.com/jasongin/nvs
 - set PATH=C:/nvs;
 - nvs --version
 environment:
   NVS_VERSION: 1.2.0
 install:
 # Install the selected version of Node.js using NVS.
-- nvs add 7.10
-- nvs use 7.10
+- nvs add 7.10.1
+- nvs use node/7.10/x64
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
