@@ -1,17 +1,16 @@
 os: windows
-language: node_js
+language: shell
 before_install:
 # Install NVS.
 - git clone --branch v$NVS_VERSION --depth 1 https://github.com/jasongin/nvs ~/.nvs
 - . ~/.nvs/nvs.sh
 - nvs --version
-global:
-# https://github.com/jasongin/nvs/blob/master/doc/CI.md
-- NVS_VERSION=1.4.2
+environment:
+  NVS_VERSION: 1.2.0
 install:
 # Install the selected version of Node.js using NVS.
-- nvs add 10.12
-- nvs use 10.12
+- nvs add %NODEJS_VERSION%
+- nvs use %NODEJS_VERSION%
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
