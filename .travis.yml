@@ -7,8 +7,8 @@ before_install:
 - nvs --version
 install:
 # Install the selected version of Node.js using NVS.
-- nvs add $NODEJS_VERSION
-- nvs use $NODEJS_VERSION
+- nvs add 11.2.0
+- nvs use 11.2.0
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
