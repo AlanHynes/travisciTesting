@@ -12,8 +12,8 @@ environment:
   NVS_VERSION: 1.2.0
 install:
 # Install the selected version of Node.js using NVS.
-- nvs add %NODEJS_VERSION%
-- nvs use %NODEJS_VERSION%
+- nvs add 7.10
+- nvs use 7.10
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
