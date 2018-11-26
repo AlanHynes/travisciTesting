@@ -18,7 +18,8 @@ install:
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
-- npm init
+#- npm init
+- npm install packagepackage --save
 # keep the npm cache around to speed up installs
 cache:
   directories:
