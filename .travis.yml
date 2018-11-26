@@ -18,3 +18,4 @@ install:
 - npm --version
 # Install the application's NPM dependencies.
 - npm init
+- npm install <pkg> --save
