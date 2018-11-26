@@ -1,12 +1,12 @@
 os: windows
 language: node_js
 node_js:
-  - "iojs"
-  - "7"
+  #- "iojs"
+  - "7.10"
 before_install:
 # Install NVS.
-- git clone --branch v1.2.0 --depth 1 https://github.com/jasongin/nvs C:\nvs
-- set PATH=C:\nvs;%PATH%
+- git clone --branch v1.2.0 --depth 1 https://github.com/jasongin/nvs C:/nvs
+- set PATH=C:/nvs;%PATH%
 - nvs --version
 environment:
   NVS_VERSION: 1.2.0
