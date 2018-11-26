@@ -17,7 +17,7 @@ install:
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
-- npm ci
+- npm install
 # keep the npm cache around to speed up installs
 cache:
   directories:
