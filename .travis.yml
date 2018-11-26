@@ -1,28 +1,22 @@
 os: windows
 language: node_js
-node_js:
-  #- "iojs"
-  - "7.10.1"
+env:
+  global:
+  - NVS_VERSION=1.2.0
+  matrix:
+  - NODEJS_VERSION=node/6
+  - NODEJS_VERSION=nightly/latest
+  - NODEJS_VERSION=chakracore/latest
 before_install:
 # Install NVS.
-- git clone --branch v1.2.0 --depth 1 https://github.com/jasongin/nvs
-- set PATH=C:/nvs;
+- git clone --branch v$NVS_VERSION --depth 1 https://github.com/jasongin/nvs ~/.nvs
+- . ~/.nvs/nvs.sh
 - nvs --version
-environment:
-  NVS_VERSION: 1.2.0
-before_install:
-  - npm i -g npm@4.2.0
 install:
-- mkdir travisAlanAgile
 # Install the selected version of Node.js using NVS.
-- nvs add 7.10.1
-- nvs use node/7.10/x64
+- nvs add $NODEJS_VERSION
+- nvs use $NODEJS_VERSION
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
-#- npm init
-- npm install <package> --save
-# keep the npm cache around to speed up installs
-cache:
-  directories:
-  - "$HOME/.npm"
+- npm install
