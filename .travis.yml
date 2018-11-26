@@ -1,5 +1,10 @@
 os: windows
 language: node_js
+node_js:
+  #- "iojs"
+  - 7
+  - 10
+  - node
 env:
   global:
   - NVS_VERSION=1.2.0
@@ -14,8 +19,8 @@ before_install:
 - nvs --version
 install:
 # Install the selected version of Node.js using NVS.
-- nvs add $NODEJS_VERSION
-- nvs use $NODEJS_VERSION
+- nvs add node
+- nvs use node
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
