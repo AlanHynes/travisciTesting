@@ -4,8 +4,8 @@ node_js:
   - "7"
 before_install:
 # Install NVS.
-- git clone --branch v1.2.0 --depth 1 https://github.com/jasongin/nvs %LOCALAPPDATA%\nvs
-- set PATH=%LOCALAPPDATA%\nvs;%PATH%
+- git clone --branch v1.2.0 --depth 1 https://github.com/jasongin/nvs C:\nvs
+- set PATH=C:\nvs;%PATH%
 - nvs --version
 environment:
   NVS_VERSION: 1.2.0
