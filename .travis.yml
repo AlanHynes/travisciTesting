@@ -17,6 +17,8 @@ install:
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
-- npm init
-- npm help json
-- npm install <pkg> --save
+- npm ci
+# keep the npm cache around to speed up installs
+cache:
+  directories:
+  - "$HOME/.npm"
