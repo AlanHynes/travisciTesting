@@ -2,8 +2,8 @@ os: windows
 language: shell
 before_install:
 # Install NVS.
-- git clone --branch v$NVS_VERSION --depth 1 https://github.com/jasongin/nvs ~/.nvs
-- . ~/.nvs/nvs.sh
+- git clone --branch v%NVS_VERSION% --depth 1 https://github.com/jasongin/nvs %LOCALAPPDATA%\nvs
+- set PATH=%LOCALAPPDATA%\nvs;%PATH%
 - nvs --version
 environment:
   NVS_VERSION: 1.2.0
