@@ -12,7 +12,7 @@ environment:
   NVS_VERSION: 1.2.0
 before_install:
   - npm i -g npm@4.2.0
-  install:
+install:
 - mkdir travisAlanAgile
 # Install the selected version of Node.js using NVS.
 - nvs add 7.10.1
