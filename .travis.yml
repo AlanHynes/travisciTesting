@@ -5,9 +5,12 @@ before_install:
 - git clone --branch v$NVS_VERSION --depth 1 https://github.com/jasongin/nvs ~/.nvs
 - . ~/.nvs/nvs.sh
 - nvs --version
+global:
+# https://github.com/jasongin/nvs/blob/master/doc/CI.md
+- NVS_VERSION=1.4.2
 install:
 # Install the selected version of Node.js using NVS.
-- nvs add10.12
+- nvs add 10.12
 - nvs use 10.12
 - node --version
 - npm --version
