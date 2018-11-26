@@ -1,5 +1,7 @@
 os: windows
 language: node_js
+node_js:
+  - "7"
 before_install:
 # Install NVS.
 - git clone --branch v1.2.0 --depth 1 https://github.com/jasongin/nvs %LOCALAPPDATA%\nvs
