@@ -24,4 +24,3 @@ install:
 - node --version
 - npm --version
 # Install the application's NPM dependencies.
-- npm install
